@@ -1,0 +1,309 @@
+
+:root {
+    --theme-color: rgb(30, 42, 71); 
+    --secondary-color: #4D6C92; 
+    --accent-color: #FF7F50; 
+    --background-default-color: #F5F5F5; 
+    --default-text: #333333; 
+}
+
+* {
+    font-family: 'Arial', sans-serif; 
+    box-sizing: border-box; 
+}
+.bottomArea{
+    grid-area: down;
+    display:grid;
+    grid-template-areas:"area1 area1"
+                        "area2 area2";
+    position: relative;
+    padding: 20px; 
+    margin: 1rem 0;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+
+.bottomArea:before{
+    content:"Web and Computer Programming Certificate";
+    position:absolute;
+    top:-20px;
+    left: 1.5%;
+    right: 1.5%;  
+    text-align: center;
+    color:white;
+    padding: 10px; 
+    line-height: 1.6; 
+    font-size: 1rem;
+    background-color: var(--theme-color);
+    margin:0.1%;
+    font-family: 'Roboto', sans-serif;
+    z-index: 10;
+    border-radius: 5px 5px 0 0;
+    
+}
+
+.button {
+    display: block;
+    width: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: var(--theme-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.filteresButton{
+    text-align: center;
+    background-color: var(--accent-color);
+    position:relative;
+    width:100%;
+}
+.filteresButtonIncomplete{
+    text-align: center;
+    background-color: var(--secondary-color);
+    width:100%;
+}
+
+header {
+    grid-area: header;
+    background-color: var(--theme-color);
+  
+}
+
+.navFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 1rem;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+nav li {
+    margin-right: 15px;
+}
+
+nav li:hover {
+    background-color: var(--theme-color);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+#menu {
+    display: flex;
+}
+
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.mainArea {
+    grid-area: main;
+}
+.bottom
+.asideArea {
+    grid-area: aside;
+    background-color: var(--background-color);
+}
+.veracruz{
+    position: relative;
+    width: 70%;
+    height: 70%;
+    align-self: flex-end;
+}
+.veracruz:after{
+     content: "Veracruz";
+    position: absolute; 
+    top: -200px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #333; 
+    padding: 10px; 
+    border-radius: 5px; 
+
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--theme-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+.themeColor {
+    color: white; 
+    background-color: var(--theme-color);
+    margin-top: 0; 
+    padding-top: 0; 
+}
+.smallTitlesStyle{
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
+}
+.card{
+    border: .5px solid black;
+    border-radius: 5px;
+    margin:1rem;
+}
+.titleFont {
+    font-size: 35px; 
+    text-align: center;
+    padding-top:1rem;
+    font-family: 'Roboto', sans-serif;
+}
+.aboutMeClass{
+    color:var(--default-text);
+    padding: 20px; 
+    text-align: justify; 
+    line-height: 1.6; 
+    font-size: 20px;
+    margin: 1rem 0;
+
+}
+
+.picturesAboutMe{
+    max-width: 100%;
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    margin: 1rem; 
+    display: block; 
+}
+@media (max-width: 768px) {
+    .area2 {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        width: 100%;
+    }
+    .area1{
+        gap: 20px;
+        padding: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    body {
+        display: grid;
+        grid-template-areas: 
+            "header"
+            "main"
+            "aside"
+            "down"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        margin: 0;
+        font-family: 'Roboto', sans-serif; 
+        color: white; 
+        background-color: var(--background-default-color);
+    }
+
+    #menu {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    #menu.active {
+        display: flex; 
+    }
+
+    .hamburger {
+        display: flex; 
+    }
+    
+}
+@media (min-width: 800px) {
+    .area1{
+        grid-area:area1;
+        height:5rem;
+        border-bottom: 1px solid black;
+        left: 0%;
+        right: 0%;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+        }
+        .area2{
+        grid-area: area2;
+        width: 100%;
+        height: auto;
+        flex-grow: 1;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap:20px ;
+        
+        }
+        
+    body {
+        display: grid;
+        grid-template-areas: 
+            "header header"
+            "main aside"
+            "down down"
+            "footer footer";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        margin: 0;
+        font-family: 'Roboto', sans-serif; 
+        color: white; 
+        background-color: var(--background-default-color);
+    }
+    header .header-content {
+        display: flex;
+       justify-content: center;
+        gap: 10px;
+    }
+    
+    header .profile-image {
+        width: 50px; 
+        height: 50px;
+        margin: 15px;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
