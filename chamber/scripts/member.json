@@ -1,0 +1,65 @@
+ [
+  {
+    "name": "Acme Corp",
+    "email": "mail123@domain.com",
+    "phone": "(555) 555-1234",
+    "website": "https://www.acmecorp.com",
+    "image": "acme_logo.png",
+    "membershipLevel": 2, 
+    "industry": "Manufacturing"
+  },
+  {
+    "name": "Tech Solutions Inc.",
+    "email": "mail456@domain.com",
+    "phone": "(555) 555-5678",
+    "website": "https://www.techsolutions.com",
+    "image": "tech_logo.svg",
+    "membershipLevel": 3,  
+    "founded": 2005
+  },
+  {
+    "name": "Global Enterprises",
+    "email": "mail789@domain.com",
+    "phone": "(555) 555-9012",
+    "website": "https://www.globalenterprises.net",
+    "image": "globe_icon.jpg",
+    "membershipLevel": 1,
+    "employees": 5000
+  },
+  {
+    "name": "Creative Designs",
+    "email": "mail1011@domain.com",
+    "phone": "(555) 555-4321",
+    "website": "https://www.creativedesigns.org",
+    "image": "design_icon.svg",
+    "membershipLevel": 2, 
+    "specialization": "Graphic Design"
+  },
+  {
+    "name": "Green Energy Solutions",
+    "email": "mail1112@domain.com",
+    "phone": "(555) 555-8765",
+    "website": "https://www.greenenergysolutions.eco",
+    "image": "solar_panel.png",
+    "membershipLevel": 3, 
+    "mission": "To promote sustainable energy"
+  },
+  {
+    "name": "Innovative Tech",
+    "email": "mail1213@domain.com",
+    "phone": "(555) 555-3456",
+    "website": "https://www.innovativetech.io",
+    "image": "innovation_icon.svg",
+    "membershipLevel": 1, 
+    "founded": 2018
+  },
+  {
+    "name": "Global Foods",
+    "email": "mail1314@domain.com",
+    "phone": "(555) 555-7890",
+    "website": "https://www.globalfoods.com",
+    "image": "world_cuisine.jpg",
+    "membershipLevel": 2, 
+    "products": ["Organic produce", "International delicacies"]
+  }
+]
