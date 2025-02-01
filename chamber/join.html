@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Title</title>
+    <meta name="description" content="Description of the document">
+    <meta name="author" content="Author Name">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400">
+    <link rel="stylesheet" href="styles/styleMenuFooter.css">
+    <link rel="stylesheet" href="styles/styleJoin.css">
+    <script src="scripts/defaultComponents.js" type="module" defer></script>
+    <script src="scripts/form.js" type="module" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+    <form action="thankyou.html" method="get">
+        <label>
+            First Name:
+            <input type="text" name="first_name" title="First Name" autocomplete="given-name" required>
+        </label>
+        
+        <label>
+            Last Name:
+            <input type="text" name="last_name" title="Last Name" autocomplete="family-name" required>
+        </label>
+        
+        <label>
+            Organization Title:
+            <input type="text" name="organization_title" title="Organization Title" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}">
+        </label>
+        
+        <label>
+            Email:
+            <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@domain.com" required>
+        </label>
+        
+        <label>
+            Mobile Phone:
+            <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required>
+        </label>
+        
+        <label>
+            Organization Name:
+            <input type="text" name="organization" title="Organization Name" autocomplete="organization" required>
+        </label>
+        
+        <label>
+            Membership Level:
+            <select name="membership" required>
+                <option value="np">NP Membership (Non-profit, no fee)</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+            </select>
+        </label>
+        
+        <label>
+            Organization Description:
+            <textarea name="description" title="Organization Description"></textarea>
+        </label>
+        
+        <input type="hidden" name="timestamp" id="timestamp">
+        
+        <input type="submit" value="Submit Membership Application">
+    </form>
+    
+    <section class="membership-cards">
+        <div class="card" onclick="document.getElementById('npModal').showModal()">
+            <h3>NP Membership</h3>
+            <p>No fee, for non-profits.</p>
+        </div>
+        <div class="card" onclick="document.getElementById('bronzeModal').showModal()">
+            <h3>Bronze Membership</h3>
+            <p>Basic benefits.</p>
+        </div>
+        <div class="card" onclick="document.getElementById('silverModal').showModal()">
+            <h3>Silver Membership</h3>
+            <p>Extended benefits.</p>
+        </div>
+        <div class="card" onclick="document.getElementById('goldModal').showModal()">
+            <h3>Gold Membership</h3>
+            <p>Premium benefits.</p>
+        </div>
+    </section>
+    
+    <dialog id="npModal">
+        <h2>NP Membership Benefits</h2>
+        <p>Access to events, training, and basic resources.</p>
+        <button onclick="document.getElementById('npModal').close()">Close</button>
+    </dialog>
+    <dialog id="bronzeModal">
+        <h2>Bronze Membership Benefits</h2>
+        <p>Includes NP benefits plus additional networking opportunities.</p>
+        <button onclick="document.getElementById('bronzeModal').close()">Close</button>
+    </dialog>
+    <dialog id="silverModal">
+        <h2>Silver Membership Benefits</h2>
+        <p>All Bronze benefits plus event discounts.</p>
+        <button onclick="document.getElementById('silverModal').close()">Close</button>
+    </dialog>
+    <dialog id="goldModal">
+        <h2>Gold Membership Benefits</h2>
+        <p>All Silver benefits plus priority advertising and exclusive training.</p>
+        <button onclick="document.getElementById('goldModal').close()">Close</button>
+    </dialog>
+    
+    <script>
+        document.getElementById('timestamp').value = new Date().toISOString();
+    </script>
+    </main>
+</body>
+</html>
