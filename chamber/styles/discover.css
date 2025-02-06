@@ -1,0 +1,92 @@
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.seccion3 {
+    grid-area: body;
+    display: grid;
+    grid-template-areas: "cards";
+    width: 100%;
+    padding: 10px;
+}
+
+.card3 {
+    display: grid;
+    background-color: #ccc;
+    padding: 30px;
+    margin: 5px;
+    align-items: center;
+    position: relative;
+}
+
+.card3::before {
+    content: attr(data-title) "\A" attr(data-subtitle); 
+    white-space: pre-line;
+    font-weight: bold;
+    color: #333;
+    width: 100%;
+    text-align: start;
+    margin-bottom: 10px;
+}
+
+.info-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-areas:
+        "imagen"
+        "texto"
+        "boton";
+    gap: 10px;
+    width: 100%;
+}
+
+img {
+    grid-area: imagen;
+    display: block;
+    width: 300px;
+
+    height: 200px;
+    object-fit: cover;
+}
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.data {
+    grid-area: texto;
+}
+
+button {
+    grid-area: boton;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+
+@media (min-width: 699px) {
+    .info-container {
+        grid-template-columns: minmax(400px, 1fr); 
+        grid-template-areas: 
+            "imagen texto"
+            "boton boton";
+        align-items: center;
+    }
+}
+
+@media (min-width: 1000px) {
+    .seccion3 {
+        grid-template-areas: "cards cards2";
+    }
+}

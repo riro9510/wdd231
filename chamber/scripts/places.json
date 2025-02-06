@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Paquimé Archaeological Zone",
+        "address": "Nuevo Casas Grandes, Chihuahua",
+        "description": "A fascinating archaeological site showcasing the ruins of an ancient pre-Hispanic city, recognized as a UNESCO World Heritage Site.",
+        "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/2f/c6/69/closeup-of-original-structures.jpg?w=900&h=500&s=1"
+    },
+    {
+        "name": "Museum of Northern Cultures",
+        "address": "Nuevo Casas Grandes, Chihuahua",
+        "description": "A museum displaying artifacts and exhibits related to the Paquimé culture and other ancient cultures of northern Mexico.",
+        "url": "https://www.mexicodesconocido.com.mx/sites/default/files/nodes/2675/museo-culturas-norte-chihuahua.jpg"
+    },
+    {
+        "name": "Cueva de las Monas",
+        "address": "Chihuahua, Chihuahua",
+        "description": "A cave with ancient rock paintings dating back thousands of years, located near the city of Chihuahua.",
+        "url": "https://www.inah.gob.mx/images/fotodeldia/20240902_fotodia_CuevaMonas.jpg"
+    },
+    {
+        "name": "Cumbres de Majalca National Park",
+        "address": "Near Chihuahua, Chihuahua",
+        "description": "A national park with stunning rock formations, ideal for hiking and nature observation.",
+        "url": "https://chihuahua.gob.mx/sites/default/files/grupos/user599/cumbres_de_majalca_1.jpg"
+    },
+    {
+        "name": "Hacienda de San Diego",
+        "address": "Nuevo Casas Grandes, Chihuahua",
+        "description": "A restored historic hacienda offering a glimpse into rural life and the history of the region.",
+        "url": "https://escapetomexico.com/wp-content/uploads/2020/10/GEMD-CHIH_HDA-SN-DIEGO_IGmd-OK-scaled-1.jpg"
+    },
+    {
+        "name": "Cerro de la Campana",
+        "address": "Nuevo Casas Grandes, Chihuahua",
+        "description": "An iconic hill with panoramic views of the city and its surroundings, perfect for a short hike.",
+        "url": "https://live.staticflickr.com/2445/3642812626_e90e097d77_b.jpg"
+    },
+    {
+        "name": "Santa Eulalia Mine",
+        "address": "Aquiles Serdán, Chihuahua",
+        "description": "An ancient mine that played a significant role in the region's mining history, located a short distance from Nuevo Casas Grandes.",
+        "url": "https://visitchihuahua.wordpress.com/wp-content/uploads/2012/04/dsc06229.jpg"
+    },
+    {
+        "name": "Laguna de Bustillos",
+        "address": "Cuauhtémoc, Chihuahua",
+        "description": "A lagoon surrounded by natural landscapes, ideal for birdwatching and outdoor activities.",
+        "url": "https://oem.com.mx/elheraldodechihuahua/img/13729672/1724235804/BASE_LANDSCAPE/480/WhatsApp%20Image%202024-08-21%20at%201.20.31%20PM.webp"
+    }
+]

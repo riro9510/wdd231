@@ -4,8 +4,8 @@ import {createFooter} from "./footer.js";
 const navBarMenu = {
     "Home": "./index.html",
     "Directory": "./directory.html",
-    "Join": "join.html",
-    "Discover": "#",
+    "Join": "./join.html",
+    "Discover": "./discover.html",
 };
 
 
