@@ -153,8 +153,7 @@ class Character {
         const storiesV = stories.items.map(item => {
             return item.name
            
-        });   
-        console.log(storiesV);     
+        });     
         this.id = id;
         this.title = title; 
         this.description = description;

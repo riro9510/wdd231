@@ -5,7 +5,6 @@ async function renderComponent() {
     const path = window.location.pathname;
     const searchValue = "";
     function changingQuery(page){
-        console.log("parametro",page);
         const comics = "comics";
         const characters = "characters";
         const creators = "creators";
@@ -38,7 +37,6 @@ async function renderComponent() {
             if(searchQuery.length!=0){
             debounceTimeout = setTimeout(async () => {
                 try {
-                    console.log("Buscando:", searchQuery); 
                     const data = await fetchMarvelData({
                         tipoBusqueda: changingQuery(path),
                         busquedaGeneral: false,
@@ -72,8 +70,6 @@ async function renderComponent() {
     
     function renderMainData(data){
         const modal = document.getElementById('modal');
-        console.log(data);
-        console.log("data.length:",data.length);
         const gridContainer = `
                 ${data.length==0?`<h1>There are no ${changingQuery(path)} that match </h1>`:data.map(comic => {
                     const imgSrc = `${comic.thumbnail.path}/portrait_fantastic.jpg`; 
@@ -89,7 +85,7 @@ async function renderComponent() {
             }
         `;
         container.innerHTML = gridContainer; 
-        console.log("container",container);
+
         modal.appendChild(container);
         document.querySelectorAll('.comic-item').forEach(item => {
             item.addEventListener('click', () =>{
@@ -107,7 +103,6 @@ async function renderComponent() {
         const imgSrc = `${item.thumbnail.path}/portrait_uncanny.jpg`;
         const modal = document.getElementById('modal');
         const container = document.querySelector(".container");
-        console.log(item.creators);
         container.innerHTML="";
         container.innerHTML = path.includes("index")? `
             <div class="content">
