@@ -8,7 +8,7 @@ import * as marvelClases from "./marvelClases.js"
     const hash = CryptoJS.MD5(ts + privateKey + publicKey).toString();
     const adicionalData = tipoBusqueda=="comics"?"titleStartsWith":"nameStartsWith";
     console.log("valores mandados",[tipoBusqueda,busquedaGeneral,adicionalData,valorBusqueda]);
-    const url = busquedaGeneral?`http://gateway.marvel.com/v1/public/${tipoBusqueda}?ts=${ts}&apikey=${publicKey}&hash=${hash}`:`http://gateway.marvel.com/v1/public/${tipoBusqueda}?${adicionalData}=${valorBusqueda}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+    const url = busquedaGeneral?`https://gateway.marvel.com/v1/public/${tipoBusqueda}?ts=${ts}&apikey=${publicKey}&hash=${hash}`:`https://gateway.marvel.com/v1/public/${tipoBusqueda}?${adicionalData}=${valorBusqueda}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
     console.log("url",url);
     try {
         const response = await fetch(url);
