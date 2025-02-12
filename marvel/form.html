@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarvelProject</title>
+    <meta name="description" content="A shown of the Marvel Characters and Authors">
+    <meta name="author" content="Ricardo Ramos Olivares">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400&family=Oswald:400">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/defaultContainer.css">
+    <script src="scripts/defaultComponents.js" type="module" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="scripts/marvelComponents.js" type="module" defer></script>
+    <meta property="og:title" content="Marvel Characters - Your Ultimate Experience" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.tusitio.com/images/imagen-facebook.jpg" />
+    <meta property="og:url" content="https://riro9510.github.io/wdd231/marvel/index.html" />
+    <meta property="og:description" content="A shown of the the Marvel Characters." />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h2 style="padding: auto;">Send comments related to the site, share your linked-In and let´s connect</h2>
+        <form  action="https://formspree.io/f/mgvolygd"
+                method="POST">
+            <label>
+                First Name:
+                <input type="text" name="first_name" title="First Name" autocomplete="given-name" required>
+            </label>
+            
+            <label>
+                Last Name:
+                <input type="text" name="last_name" title="Last Name" autocomplete="family-name" required>
+            </label>
+            
+            <label>
+                Email:
+                <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@domain.com" required>
+            </label>
+            
+            <label>
+                Comments:
+                <textarea name="description" title="Enter Comments"></textarea>
+            </label>
+            
+            <input type="submit" value="Submit Message">
+        </form>
+    </main>
+</body>
+</html>

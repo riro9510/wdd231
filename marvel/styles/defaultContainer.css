@@ -1,0 +1,105 @@
+.container {
+    grid-area: body;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+}
+
+.content {
+    display: grid;
+    grid-template-areas:
+        "title title"
+        "description picture"
+        "buttons buttons";
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px; 
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+
+h1 {
+    grid-area: title;
+    text-align: center;
+    width: 100%;
+}
+
+.description {
+    grid-area: description;
+    grid-template-areas: "publish"
+                         "writer others"
+                         "artis"
+                         "description" ;
+}
+
+.hero-image {
+    grid-area: picture;
+    width: 300px;
+    height: 450px;
+    background: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    border-radius: 10px;
+}
+
+.buttons {
+    grid-area: buttons;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin: 50px;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-areas:
+            "title"
+            "picture"
+            "description"
+            "buttons";
+        grid-template-columns: 1fr; 
+    }
+
+    .hero-image {
+        width: 300px;
+        height: 450px;
+    }
+    .description{
+        margin:30px;
+        padding: auto;
+        grid-template-areas: "publish"
+        "writer"
+        "others"
+        "artis"
+        "description" ;
+    }
+    .characters p{
+        text-align: left;
+    }
+    .characters p br {
+        display: block; 
+      }
+      .titles{
+        font-weight: bold;
+      }
+}
