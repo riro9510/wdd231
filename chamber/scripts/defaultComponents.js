@@ -10,6 +10,7 @@ const navBarMenu = {
 
 
 const menu = createMenu(navBarMenu);
+menu.style.zIndex="10";
 const footer = createFooter();
 document.body.appendChild(menu);
 document.body.appendChild(footer);

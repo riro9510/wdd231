@@ -2,8 +2,8 @@
 export function createMenu(navBarMenu) {
     const header = document.createElement("header");
 
-    const image = document.createElement("div");
-    image.innerHTML = "<i class='fas fa-gavel'></i> Chamber Logo";
+    const image = document.createElement("h1");
+    image.innerText = "Casas Grandes";
     image.classList.add("logo");
     header.appendChild(image);
 

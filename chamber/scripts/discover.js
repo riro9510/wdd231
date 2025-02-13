@@ -24,7 +24,7 @@ async function fetchjson() {
 
         card.innerHTML = `
             <section class="info-container">      
-                   <img src=${place["url"]} width="300" height="200" loading="lazy">
+                   <img src=${place["url"]} width="300" height="200" loading="lazy" alt=${place["name"]}>
                     <section class="data">
                      <p>${place["description"]}<br>
                     <br>
@@ -53,7 +53,7 @@ async function fetchjson() {
     sidebar.style.borderRadius = "10px";
     sidebar.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.2)";
     sidebar.style.fontSize = "14px";
-    sidebar.style.zIndex = "1000";
+    //sidebar.style.zIndex = "1000";
     sidebar.style.maxWidth = "250px";
     sidebar.style.transition = "opacity 0.5s ease-out";
 
