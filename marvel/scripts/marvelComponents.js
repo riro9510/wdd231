@@ -178,19 +178,19 @@ async function renderComponent() {
                 </div>
             </div>`;
 
-        // Evento para el botón "Choose"
+        
         document.getElementById('choose-btn').addEventListener('click', () => {
             renderMainData(data);
             modal.style.display = 'block';
         });
 
-        // Evento para el botón "Next"
+        
         document.getElementById('next-btn').addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % data.length; // Avanzar al siguiente elemento
+            currentIndex = (currentIndex + 1) % data.length;
             renderSingleItem(data, currentIndex);
         });
     }
-    let currentIndex = 0;
+    let currentIndex = 4;
     const data = await fetchMarvelData({tipoBusqueda:changingQuery(path),busquedaGeneral:true,valorBusqueda:""});
         renderSingleItem(data, currentIndex);
 
